@@ -9,6 +9,10 @@
     font-variation-settings:
       "wdth" 100;
   }
+
+  *{
+    text-decoration: none;
+  }
   
 
   /* shared styles */
@@ -25,6 +29,7 @@
   .ba{
     color: #5D58EF;
   }
+  
   .text-description-1{
     font-size: 1.25rem;
     font-weight: 400;
@@ -152,31 +157,99 @@ nav ul li a{
 
 
 /* curriculam related style */
-.bg-img{
+.bi{
   background-image: url(../assets/bg.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.card{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 30px;
+
+.curricullam-container{
+  margin: 20px 140px;
+  max-width: 1160px;
+  margin-top: 50px;
 }
-.card-item{
-  background-color: aqua;
-  max-width: 368px;
-  border-radius: 19px;
-}
-.card-item-img{
-  display: flex;
+
+.curriculam-heading{
   text-align: center;
+  padding-bottom: 15px;
+  color:#000000 ;
+  font-size:2rem ;
+  font-weight: bold;
 }
-.card-item-heading{
- display: flex;
- justify-content: center;  
+
+.curriculam-card-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 29px;
+}
+.card{
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  border-radius: 19px;
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 53px 40px;
+}
+.gradiant-1{
+  background: linear-gradient(180deg, rgba(135, 207, 235, 0.269), #FFFFFF);
+}
+.gradiant-2{
+  background: linear-gradient(180deg, rgba(255, 166, 0, 0.303), #FFFFFF);
+}
+.gradiant-3{
+  background: linear-gradient(180deg, #8800ff4a, #FFFFFF);
+}
+
+.card img{
+  height: 131px;
+}
+
+.card h3{
+  color:#202020 ;
+  font-size:1.5rem ;
+  padding: 5px;
+}
+
+.cd-1a{
+  color: #64C8FF;
+  font-weight: 500;
+}
+.cd-2a{
+  color: #F0AA00;
+  font-weight: 500;
+}
+.cd-3a{
+  color:#8700FF;
+  font-weight: 500;
+}
+.array{
+  text-align: center;
+  max-width: 100px;
+  max-height: 100px;
+  background-color: orange;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.array-container{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+@media screen and (max-width:576px){
+.curriculam-card-container{
+  grid-template-columns: repeat(1,1fr);
+}
+.curricullam-container{
+  margin: 20px 30px;
+}
+.array-container{
+  display: none;
+}
 }
 
 
+/* story related style */
 
 
 
