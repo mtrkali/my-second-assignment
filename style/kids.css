@@ -92,6 +92,27 @@ nav ul li a{
 .bg-nav{
   background-color: orange;
 }
+.menu-icon{
+  font-size: 1.8rem;
+  display: none;
+}
+
+@media screen and (max-width:576px){
+  .nav-list,
+  .nav-btn{
+    display:none;
+  }
+  .menu-icon{
+    display: block;
+    margin-left: 100px;
+  }
+  .nav-head h2{
+    display: none;
+  }
+  .nav-container{
+    margin: 2rem;
+  }
+}
 
 /* hero-section realated style */
 .hero-section{
@@ -115,7 +136,45 @@ nav ul li a{
   color: #FFFFFF;
   background-color: black;
 }
+@media screen and (max-width: 576px) {
+  .hero-section{
+    flex-direction: column-reverse;
+    margin: 0px 10px
+  }
+  .hero-section-content{
+    text-align: center;
+  }
+  .hero-heading{
+    text-align: center;
+    max-width: none;
+  }
+}
 
+
+/* curriculam related style */
+.bg-img{
+  background-image: url(../assets/bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.card{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+.card-item{
+  background-color: aqua;
+  max-width: 368px;
+  border-radius: 19px;
+}
+.card-item-img{
+  display: flex;
+  text-align: center;
+}
+.card-item-heading{
+ display: flex;
+ justify-content: center;  
+}
 
 
 
