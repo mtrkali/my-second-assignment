@@ -12,10 +12,15 @@
 
   *{
     text-decoration: none;
+    margin: 0;
+    padding: 0;
   }
   
 
   /* shared styles */
+  .pc{
+    color: #ffffffda;
+  }
   .or{
     color: orange;
   }
@@ -87,6 +92,7 @@ nav ul{
 .nav-head{
   display: flex;
   gap: 11px;
+  align-items: center;
 }
 
 nav ul li a{
@@ -140,6 +146,7 @@ nav ul li a{
 .hero-btn{
   color: #FFFFFF;
   background-color: black;
+  margin-top: 20px;
 }
 @media screen and (max-width: 576px) {
   .hero-section{
@@ -188,15 +195,16 @@ nav ul li a{
   background-color: #FFFFFF;
   text-align: center;
   padding: 53px 40px;
+  z-index: 10;
 }
 .gradiant-1{
-  background: linear-gradient(180deg, rgba(135, 207, 235, 0.269), #FFFFFF);
+  background: linear-gradient(180deg, rgba(135, 207, 235, 1), #FFFFFF);
 }
 .gradiant-2{
-  background: linear-gradient(180deg, rgba(255, 166, 0, 0.303), #FFFFFF);
+  background: linear-gradient(180deg, rgba(255, 166, 0, 1), #FFFFFF);
 }
 .gradiant-3{
-  background: linear-gradient(180deg, #8800ff4a, #FFFFFF);
+  background: linear-gradient(180deg, #8800ffe6, #FFFFFF);
 }
 
 .card img{
@@ -229,6 +237,9 @@ nav ul li a{
   border-radius: 50%;
   color: #FFFFFF;
   font-weight: 600;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 .array-container{
   display: flex;
@@ -251,13 +262,12 @@ nav ul li a{
 
 /* story related style */
 
-.story-container{
-  max-width: 1160px;
-}
+
 
 .story-heading{
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .stories{
@@ -271,6 +281,9 @@ nav ul li a{
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(2,1fr);
   gap: 10px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .story-card img{
@@ -278,9 +291,39 @@ nav ul li a{
   border-top-right-radius: 5%;
 }
 
+
+
+.story-card-l{
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  border-radius: 5%;
+  text-align: center;
+  background-color: #FFFFFF;
+  text-align: center;
+  position: relative;
+}
+.story-card-l button{
+  background-color: orange;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.811);
+  border-radius: 35%;
+  border: none;
+  padding: 10px 15px;
+  position: absolute;
+  top:63.5%;
+  left: 38%;
+  
+}
 .story-card-l img{
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
+}
+
+.story-card-l p{
+  padding: 20px;
+}
+.story-card-l h3{
+  padding-top: 10px;
 }
 
 .story-card{
@@ -289,14 +332,7 @@ nav ul li a{
   text-align: center;
   background-color: #FFFFFF;
   text-align: center;
-}
-
-.story-card-l{
-  box-shadow: 0 5px 10px rgba(0,0,0,.3);
-  border-radius: 5%;
-  text-align: center;
-  background-color: #FFFFFF;
-  text-align: center;
+  position: relative;
 }
 
 
@@ -308,15 +344,13 @@ nav ul li a{
   border-radius: 35%;
   border: none;
   padding: 10px 15px;
+  position: absolute;
+  top:65%;
+  left:26%;
+  width:150px;
 }
-.story-card-l button{
-  background-color: orange;
-  font-size: 12px;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.811);
-  border-radius: 35%;
-  border: none;
-  padding: 10px 15px;
+.story-card h3{
+  padding-top: 10px ;
 }
 
 .stories-button button{
@@ -334,6 +368,11 @@ nav ul li a{
 @media screen and (max-width:576px){
   .story-card-container{
     grid-template-columns: repeat(2,1fr);
+    margin-left: 0px;
+  }
+  .story-container{
+    /* margin: 10px;
+    margin-right: 15px; */
   }
   .story-card-l{
     display: none; 
@@ -341,17 +380,75 @@ nav ul li a{
   .story-card, .story-card img{
     display: block; 
     max-width: 230px;
+    margin-left: 0px;
 
   }
   .stories-button{
-    margin-bottom: 20px;
+    margin: 10px;
   }
+  .story-card-container{
+    width: 0;
+  }
+  .story-card button{
+    top: 55%;
+    left: 18%;
+  }
+
+}
+
+/* footer-related style */
+
+.footer-container{
+  width: 1070px;
+  background-color: #05D4DF;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 170px;
+  padding: 93px 200px 150px 50px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.footer-content-p{
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: .75rem;
+}
+
+.footer-nav nav ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav nav ul a{
+  color: #ffffffc1;
+  font-size: .8rem;
+}
+
+.footer-icon-img{
+  margin-top: 10px;
 }
 
 
+@media screen and (max-width:576px){
+  .footer-container{
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-top: -10px;
+  }
+  .footer-content-p{
+    max-width: 250px;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
 
+  .footer-content{
+    margin-left: -10px;
+  }
 
-
+}
 
 
 
